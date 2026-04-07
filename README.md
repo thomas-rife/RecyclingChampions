@@ -1,7 +1,7 @@
 # Recycling Champions
 
 ## Unity Version
-Unity 6.x (or whatever you used)
+Unity 6.3
 
 ## How to run
 1. Open Unity Hub

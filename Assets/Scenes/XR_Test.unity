@@ -593,7 +593,6 @@ MonoBehaviour:
   roundUI: {fileID: 292107896}
   throwGuide: {fileID: 0}
   guideStartPoint: {fileID: 1903540403}
-  fallbackGuideStartPosition: {x: -1.05311, y: 1.351, z: 15.714}
 --- !u!4 &454207948
 Transform:
   m_ObjectHideFlags: 0
@@ -2949,7 +2948,7 @@ Transform:
   m_GameObject: {fileID: 1903540402}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.962, y: 1.351, z: 15.714}
+  m_LocalPosition: {x: -0.962, y: 1.433, z: 15.714}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

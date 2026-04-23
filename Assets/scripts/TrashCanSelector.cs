@@ -47,15 +47,15 @@ public class TrashCanSelector : MonoBehaviour
         }
 
         // keyboard input as a  stand-in for controller or gesture input
-        if (WasSelectionPressed(Keyboard.current.digit1Key, Keyboard.current.numpad1Key, Keyboard.current.bKey))
+        if (WasSelectionPressed(Keyboard.current.bKey))
         {
             SubmitSelection(can1);
         }
-        else if (WasSelectionPressed(Keyboard.current.digit2Key, Keyboard.current.numpad2Key, Keyboard.current.nKey))
+        else if (WasSelectionPressed(Keyboard.current.nKey))
         {
             SubmitSelection(can2);
         }
-        else if (WasSelectionPressed(Keyboard.current.digit3Key, Keyboard.current.numpad3Key, Keyboard.current.mKey))
+        else if (WasSelectionPressed(Keyboard.current.mKey))
         {
             SubmitSelection(can3);
         }
@@ -225,9 +225,12 @@ public class TrashCanSelector : MonoBehaviour
             return;
         }
 
-        Vector3 startPosition = guideStartPoint != null
-            ? guideStartPoint.position
-            : fallbackGuideStartPosition;
+        if (guideStartPoint == null)
+        {
+            return;
+        }
+
+        Vector3 startPosition = guideStartPoint.position;
 
         throwGuide.ShowGuide(startPosition, targetCan.transform.position);
     }

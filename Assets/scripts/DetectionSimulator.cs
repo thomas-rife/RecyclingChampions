@@ -3,7 +3,6 @@ using UnityEngine;
 public class DetectionSimulator : MonoBehaviour
 {
     [SerializeField] private RoundManager roundManager;
-    [SerializeField] private DetectionOverlay detectionOverlay;
     [SerializeField] private float detectionCooldown = 2f;
 
     private string lastAcceptedLabel = "";
@@ -22,11 +21,6 @@ public class DetectionSimulator : MonoBehaviour
         }
 
         string normalizedLabel = label.Trim().ToLowerInvariant();
-
-        if (detectionOverlay != null)
-        {
-            detectionOverlay.UpdateBox(centerX, centerY, width, height);
-        }
 
         if (roundManager == null)
         {

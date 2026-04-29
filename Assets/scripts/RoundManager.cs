@@ -14,10 +14,17 @@ public class RoundManager : MonoBehaviour
         Complete
     }
 
+    // TODO:
+    // Change this number to give the player more or less time to throw the trash.
+    // Example values: 5f, 10f, 20f
+    [SerializeField] private float nextRoundDelay = 20f;
+
+
+
     [SerializeField] private TrashItem[] trashItems;
     [SerializeField] private TrashCanSelector trashCanSelector;
     [SerializeField] private TextMeshProUGUI scoreText;
-    [SerializeField] private float nextRoundDelay = 20f;
+
     [SerializeField] private DetectionSimulator detectionSimulator;
 
     private int currentIndex = -1;

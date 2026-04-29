@@ -46,7 +46,10 @@ public class TrashCanSelector : MonoBehaviour
             return;
         }
 
-        // keyboard input as a  stand-in for controller or gesture input
+        // ***TODO***
+        // Change the key used to choose the trash can.
+        // Right now this uses B. Try changing it to another keyboard key.
+        // Try changing the ".bKey" to something like ".vKey"
         if (WasSelectionPressed(Keyboard.current.bKey))
         {
             SubmitSelection(can1);
@@ -90,8 +93,6 @@ public class TrashCanSelector : MonoBehaviour
         if (can2 != null) can2.SetSelected(can2 == selected);
         if (can3 != null) can3.SetSelected(can3 == selected);
 
-        // The trail guide always points to the correct bin so the player gets a visual queue
-        // after choosing, even if they selected the wrong can.
         ShowThrowGuide();
 
         CheckAnswer();

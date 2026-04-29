@@ -5,10 +5,20 @@ using UnityEngine;
 public class ThrowGuide : MonoBehaviour
 {
     [SerializeField] private LineRenderer lineRenderer;
+
+    // TODO: Change the smoothness of the line!
+    // Change this number to make the guide line smoother or blockier
+    // Example values to try: 5, 10, 30
     [SerializeField] private int pointCount = 24;
+
+    // TODO: Change the height of the throwing arc!
+    // Change this number to make the guide arc flatter or taller.
+    // Example values to try: 0.2f, 0.6f, 1.0f
     [SerializeField] private float arcHeight = 0.6f;
-    [SerializeField] private bool hideOnStart = true;
+
+    // ---------------------------------------------------------------
     [SerializeField] private float autoHideDelay = 0f;
+    [SerializeField] private bool hideOnStart = true;
 
     private Coroutine hideCoroutine;
 
